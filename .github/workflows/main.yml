@@ -34,9 +34,7 @@ jobs:
 
       - name: Build
         run: |
-          DOCKER_TAG="ghcr.io/${{ github.repository }}:${{ github.workflow_sha }}"
-          docker build -t $DOCKER_TAG .
-
+          npm run build
 
    
 
