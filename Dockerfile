@@ -2,7 +2,7 @@ FROM node:18-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json tsconfig.json ./
 RUN  npm install --production
 
 FROM node:18-alpine AS builder
@@ -11,8 +11,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 
-
-RUN 
+RUN npm run build
 
 FROM node:18-alpine AS runner
 WORKDIR /app
