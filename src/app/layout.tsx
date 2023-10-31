@@ -1,10 +1,10 @@
 'use client'
 
 import './globals.css'
+import { ThemeProvider } from '@/providers/theme-provider'
 // import { UserProvider } from '@/providers/user-provider'
 import { Provider } from 'react-redux'
 import store from './store'
-import { ThemeProvider } from '../providers/theme-provider'
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
