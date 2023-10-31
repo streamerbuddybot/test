@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: streamwizard-frontend
-        image: ghcr.io/streamerbuddybot/test:b9ae9601f130e3f4b920f4991a65138d9f0f0468
+        image: ghcr.io/streamerbuddybot/test:2b54bece49f5982c958376a8e16a65e2ef675f24
         ports:
         - containerPort: 3000
         envFrom:
