@@ -31,9 +31,12 @@ jobs:
           git commit -m "Update deployment.yaml"
           git push
 
-      - name: Build
+      - name: Build and push Docker image to GHCR
         run: |
-          docker build .
+          DOCKER_TAG="ghcr.io/${{ github.repository }}:${{ github.workflow_sha }}"
+          docker build -t $DOCKER_TAG .
+          docker push $DOCKER_TAG     
+  
 
    
 
