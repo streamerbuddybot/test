@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -34,7 +34,6 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "autoprefixer": "^10.4.16"
-
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
@@ -46,9 +45,6 @@
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3",
     "typescript": "^5"
-  },
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
-  "main": "next.config.js",
-  "author": "",
-  "license": "ISC"
+    
+  }
 }

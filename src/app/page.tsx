@@ -1,8 +1,8 @@
 import Test from '@/components/test'
-import React from 'react'
+import Image from 'next/image'
 
-export default function page() {
+export default function Home() {
   return (
-    <Test />
+   <Test />
   )
 }
