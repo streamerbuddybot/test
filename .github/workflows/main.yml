@@ -17,11 +17,11 @@ jobs:
       - name: Login to GitHub Container Registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Update IMAGE Version
-        run: |
-          sed -i "s|image: ghcr.io/${{ github.repository }}:.*|image: ghcr.io/${{ github.repository }}:${{ github.sha }}|" kubernetes/resources/deployment.yaml
-          #log the changes to the deployment.yaml file
-          cat kubernetes/resources/deployment.yaml
+      # - name: Update IMAGE Version
+      #   run: |
+      #     sed -i "s|image: ghcr.io/${{ github.repository }}:.*|image: ghcr.io/${{ github.repository }}:${{ github.sha }}|" kubernetes/resources/deployment.yaml
+      #     #log the changes to the deployment.yaml file
+      #     cat kubernetes/resources/deployment.yaml
       
 
       # - name: push updated deployment.yaml
