@@ -3,8 +3,8 @@
 import './globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
 // import { UserProvider } from '@/providers/user-provider'
-// import { Provider } from 'react-redux'
-// import store from './store'
+import { Provider } from 'react-redux'
+import store from './store'
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <body>
           <ThemeProvider
             attribute="class"
@@ -28,7 +28,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </body>
-      {/* </Provider>npm  */}
+      </Provider>
     </html>
   )
 }
