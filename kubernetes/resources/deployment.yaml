@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamwizard-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: streamwizard-frontend
+  template:
+    metadata:
+      labels:
+        app: streamwizard-frontend
+    spec:
+      containers:
+      - name: streamwizard-frontend
+        image: ghcr.io/streamerbuddybot/streambuddy-wizard:b9ae9601f130e3f4b920f4991a65138d9f0f0468
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - secretRef:
+            name: streamwizard-frontend

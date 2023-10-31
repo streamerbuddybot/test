@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamwizard-frontend-nl
+  annotations: { cert-manager.io/cluster-issuer: "letsencrypt-prod" }
+
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - streamwizard.org
+      secretName: streamwizard-frontend-secret
+  rules:
+    - host: streamwizard.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: streamwizard-frontend-service
+                port:
+                  number: 80
