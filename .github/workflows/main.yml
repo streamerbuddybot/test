@@ -20,8 +20,7 @@ jobs:
       - name: Update IMAGE Version
         run: |
           sed -i "s|image: ghcr.io/${{ github.repository }}:.*|image: ghcr.io/${{ github.repository }}:${{ github.sha }}|" kubernetes/resources/deployment.yaml
-          #log the changes to the deployment.yaml file
-          cat kubernetes/resources/deployment.yaml
+      
       
 
       - name: push updated deployment.yaml
